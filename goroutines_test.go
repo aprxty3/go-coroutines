@@ -132,6 +132,8 @@ func TestSelectChannel(t *testing.T) {
 		case data := <-channel2:
 			fmt.Println("Data from channel 2:", data)
 			counter++
+		default:
+			fmt.Println("No data received")
 		}
 		if counter == 2 {
 			fmt.Println("All data received")
